@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panfleto Digital - Ney do Primavera</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(270deg, #ff6f61, #007bff);
+            background-size: 400% 400%;
+            animation: gradientAnimation 10s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+/*=============== LOGO DECIMA ===================*/
+        header {
+            background-color: rgba(0, 123, 255, 0.8);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+        }
+
+        header .container {
+            background-image: url('/img/santinho.jpeg'); /* Substitua pelo caminho da sua imagem */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            padding: 290px 20px;
+            border-radius: 20px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+        }
+
+        header h1 {
+            font-size: 36px;
+            letter-spacing: 2px;
+            font-weight: 700; /* Torna o texto mais grosso */
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adiciona sombra para maior contraste */
+        }
+
+        header p {
+            font-size: 20px;
+            margin-top: 10px;
+            font-weight: 400; /* Ajusta o peso da fonte */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Adiciona sombra para maior contraste */
+        }
+/*========================= FIM LOGO DECIMA ==================================*/
+
+/*=================== PAPEL DO VEREADOR =================================*/
+.biography {
+            margin: 40px 0;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7); /* Adiciona fundo semi-transparente */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-family: 'Roboto', sans-serif;
+            background-image: url(''); /* Substitua pelo caminho da sua imagem */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .biography h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 500;
+            color: #333; /* Ajuste a cor para garantir contraste com o fundo */
+        }
+
+        .biography p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #333; /* Ajuste a cor para garantir contraste com o fundo */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao texto */
+        }
+
+        .biography blockquote {
+            font-size: 20px;
+            font-style: italic;
+            margin: 20px 0;
+            padding: 10px 20px;
+            border-left: 4px solid #007bff;
+            background-color: rgba(18, 28, 37, 0.1);
+            border-radius: 5px;
+            color: #333; /* Ajuste a cor para garantir contraste com o fundo */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao texto */
+        }
+
+        .biography strong {
+            font-weight: bold;
+            color: #007bff; /* Mantém a cor de destaque */
+        }
+
+        .biography em {
+            font-style: italic;
+            color: #555; /* Cor mais suave para destaque */
+        }
+
+
+/*========================= PROJECTS ==================================*/
+        .projects, .propostas, .biography {
+            margin: 40px 0;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .projects h2, .propostas h2, .biography h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .project-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .project-item img {
+            max-width: 300px;
+            border-radius: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-item img:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-item p {
+            font-size: 18px;
+            line-height: 1.6;
+            width: 50%;
+        }
+/*========================= FIM PROJECTS ==================================*/
+   /*========================= PROPOSTAS ==================================*/
+   .propostas {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+    background-image: url(''); /* Substitua pelo caminho da sua imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.propostas h2 {
+    font-size: 24px;
+    margin-bottom: 20px; /* Aumentado para dar mais espaço ao título */
+    text-align: center;
+    font-weight: 600;
+    color: #333;
+}
+
+.propostas ul {
+    padding: 0;
+    list-style: none;
+}
+
+.propostas ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 18px; /* Ajustado para melhor legibilidade */
+    color: #333; /* Ajuste a cor do texto */
+    font-family: 'Roboto', sans-serif; /* Fonte consistente com o resto do layout */
+    font-weight: normal; /* Font-weight normal para o texto */
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com um pouco de transparência */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 800px; /* Limite máximo para evitar que os itens fiquem muito largos */
+    margin-left: auto;
+    margin-right: auto; /* Centraliza os itens na tela */
+    box-sizing: border-box; /* Garante que o padding e a borda sejam incluídos na largura e altura total */
+}
+
+.propostas ul li img {
+    width: 80%;
+    max-width: 400px; /* Reduzido para garantir melhor visualização */
+    height: auto;
+    margin: 20px 0;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.propostas ul li:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.propostas ul li strong {
+    color: #007bff;
+    font-size: 20px; /* Ajustado para não desviar do texto */
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 10px; /* Espaçamento abaixo do título */
+}
+
+.propostas ul li ul {
+    padding-left: 20px; /* Adiciona espaçamento para as listas internas */
+    text-align: left; /* Alinha o texto à esquerda */
+    font-size: 16px; /* Ajusta o tamanho da fonte dos itens da lista */
+    color: #555; /* Cor mais suave para os itens da lista */
+}
+
+.propostas ul li ul li {
+    margin-bottom: 10px; /* Espaçamento entre os itens da lista */
+}
+
+
+
+
+/*========================= ================================================*/
+
+
+/*========================= ================================================*/
+
+        .social {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .social h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .social a {
+            margin: 0 10px;
+            font-size: 20px;
+            color: #050505;
+            text-decoration: none;
+        }
+/*========================= FIM DA PROPOSTAS ==================================*/
+
+/*=========================   RODAPÉ ==================================*/
+        footer {
+            background-color: rgba(0, 123, 255, 0.8);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+        }
+
+        footer p {
+            margin: 0;
+        }
+/*========================= FIM  RODAPÉ ==================================*/
+
+
+
+    </style>
+
+
+
+
+
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            
+        </div>
+    </header>
+
+    <section class="banner"></section>
+
+    <section class="biography">
+        <div class="container">
+            <h2>O Papel Fundamental do Vereador</h2>
+            <p>
+                <strong>O vereador</strong> é um agente político crucial, eleito diretamente pela população por meio de voto direto e secreto. Sua atuação se dá no <strong>Poder Legislativo municipal</strong>, equivalente ao papel que <em>deputados</em> e <em>senadores</em> desempenham em níveis estaduais e federais.
+            </p>
+    
+            <p>
+                A principal função do vereador é <strong>representar os interesses da população</strong> junto ao poder público. Ele é a voz da comunidade, escolhida para defender os direitos e garantir que as necessidades locais sejam atendidas.
+            </p>
+    
+            <p>
+                Uma das atividades mais importantes do vereador é <strong>legislar</strong>, ou seja, criar e modificar as leis municipais que orientam tanto o poder público quanto a sociedade. O vereador tem a responsabilidade de assegurar que as normas sejam justas e benéficas para todos.
+            </p>
+    
+            <blockquote>
+                "Legislar é garantir que a voz da sociedade seja ouvida e respeitada."
+            </blockquote>
+    
+            <p>
+                Além de criar leis, o vereador também tem um papel fiscalizador. Ele acompanha de perto as ações do poder executivo, garantindo que os recursos públicos sejam aplicados corretamente e em conformidade com as necessidades da comunidade.
+            </p>
+    
+            <p>
+                <strong>Como representante do povo</strong>, o vereador pode apresentar projetos de lei que melhorem a qualidade de vida da população. Ele atua de maneira próxima aos eleitores, ouvindo suas demandas e propondo soluções para a câmara municipal.
+            </p>
+    
+            <p>
+                <em>Em resumo:</em> o vereador luta pela coletividade, elabora leis que beneficiam a cidade e fiscaliza o cumprimento das responsabilidades do poder executivo, sempre buscando o bem-estar da sociedade.
+            </p>
+        </div>
+    </section>
+    
+
+    <section class="propostas">
+        <div class="container">
+            <h2>Propostas de Governo</h2>
+            <ul>
+                <!-- Novas Propostas -->
+                <li>
+                    <strong>Proteção animal e saúde pública:</strong>
+                    <ul>
+                        <li>Criar ponte entre governo, sociedade, instituições (Organizações Sociais) e empresas para promover campanhas de castração.</li>
+                        <li>Incentivar a adoção e apoiar organizações sociais e protetores.</li>
+                        <li>Criação do centro de zoonoses com campanha de castração permanente.</li>
+                        <li>Cuidar e proteger os animais também é saúde!</li>
+                    </ul>
+                    <img src="/img/proteçãoanimal.jpg" alt="Proteção animal e saúde pública">
+                </li>
+                <li>
+                    <strong>Saúde e prevenção:</strong>
+                    <ul>
+                        <li>Dar andamento aos projetos de melhorias criados e desenvolvidos nos últimos seis anos no conselho.</li>
+                        <li>Intensificar a melhoria das UBS (Unidades Básicas de Saúde) com horário estendido, atendimento eletrônico, dentistas, farmácia, psiquiatras, psicólogos e equipes de Saúde da Família.</li>
+                        <li>Fiscalizar verbas de acordo com as normas constitucionais e criar leis e projetos para fomentar o desenvolvimento sustentável do município.</li>
+                        <li>Reduzir o tempo de espera nas filas e ampliar a modernização das unidades.</li>
+                        <li>Focar na saúde dos idosos e prevenção para qualidade de vida.</li>
+                        <li>Potencializar o atendimento da clínica da mulher e criar o laboratório municipal de diagnósticos para agilizar exames como tomografia e ressonância.</li>
+                    </ul>
+                    <img src="/img/saude.jpg" alt="Saúde e prevenção">
+                </li>
+                <li>
+                    <strong>Mobilidade Urbana:</strong>
+                    <ul>
+                        <li>Investir em transporte público de qualidade, ampliando a frota de ônibus e criando corredores exclusivos.</li>
+                        <li>Incentivar o uso de bicicletas com a construção de ciclovias.</li>
+                        <li>Melhorar a sinalização, manutenção das ruas e avenidas, e a iluminação pública.</li>
+                    </ul>
+                    <img src="/img/mobilidade.png" alt="Mobilidade Urbana">
+                </li>
+                <li>
+                    <strong>Cursos profissionalizantes:</strong>
+                    <ul>
+                        <li>Investir em escolas técnicas de qualidade para capacitar a população.</li>
+                        <li>Permitir que as grandes empresas do município contratem profissionais locais, sem a necessidade de buscar em cidades vizinhas.</li>
+                    </ul>
+                    <img src="/img/cursos.jpg" alt="Cursos profissionalizantes">
+                </li>
+            </ul>
+        </div>
+    </section>
+    
+    
+
+    <section class="projects">
+        <div class="container">
+            
+            <div class="project-item">
+                <img src="./img/neiedebora.jpeg" alt="Ney do Primavera - Vereador 2024">
+                <p>
+                    "Sua voz, minhas ações. Representando seus interesses na Câmara Municipal."
+
+                    "Jarinu merece um vereador presente, que ouça a população e lute pelos seus direitos."
+
+                    Jarinu, nossa casa, nosso futuro. Vamos construir juntos uma cidade melhor
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="social">
+        <div class="container">
+            <h2>Conecte-se com Ney</h2>
+            <a href="https://www.instagram.com" target="_blank">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <a href="https://www.facebook.com" target="_blank">
+                <i class="fab fa-facebook"></i> Facebook
+            </a>
+            <a href="mailto:neydoprimavera@gmail.com">
+                <i class="fas fa-envelope"></i> E-mail
+            </a>
+            <a href="https://wa.me/5511999999999" target="_blank">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            
+        </div>
+    </section>
+    
+    
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024. Ney do Primavera - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
