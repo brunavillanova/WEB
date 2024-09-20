@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panfleto Digital - Ney do Primavera</title>
+    <link rel="icon" href="img/ney.icon" type="img/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+
 
 
     <link rel="stylesheet" href="style.css">
@@ -37,15 +40,16 @@
 
 /*=============== LOGO DECIMA ===================*/
         header {
-            background-color: rgba(0, 123, 255, 0.8);
+            background: linear-gradient(270deg, #d68d49, #007bff); 
             color: white;
             text-align: center;
             padding: 20px 0;
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+            
         }
 
-                header .container {
+        header .container {
             background-image: url('/img/santinho.jpeg'); /* Caminho correto da sua imagem */
             background-size: cover; /* Garante que a imagem cubra o espaço sem cortar */
             background-position: center; /* Centraliza a imagem */
@@ -56,8 +60,8 @@
             box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
         }
 
-        /* Ajuste para telas menores */
-        @media (max-width: 768px) {
+         /* Ajuste para telas menores */
+         @media (max-width: 768px) {
             header .container {
                 padding: 150px 10px; /* Diminui o padding em telas menores */
                 background-size: contain; /* Faz a imagem se ajustar sem ser cortada */
@@ -116,7 +120,7 @@
             font-style: italic;
             margin: 20px 0;
             padding: 10px 20px;
-            border-left: 4px solid #007bff;
+            border-left: 4px solid #273849;
             background-color: rgba(18, 28, 37, 0.1);
             border-radius: 5px;
             color: #333; /* Ajuste a cor para garantir contraste com o fundo */
@@ -133,51 +137,98 @@
             color: #555; /* Cor mais suave para destaque */
         }
 
+          /* Ajuste para telas menores */
+          @media (max-width: 768px) {
+            header .container {
+                padding: 150px 10px; /* Diminui o padding em telas menores */
+                background-size: contain; /* Faz a imagem se ajustar sem ser cortada */
+            }
+        }
+
 
 /*========================= PROJECTS ==================================*/
-        .projects, .propostas, .biography {
-            margin: 40px 0;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .projects h2, .propostas h2, .biography h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .project-item {
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-
-        .project-item img {
-            max-width: 300px;
-            border-radius: 20px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .project-item img:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .project-item p {
-            font-size: 18px;
-            line-height: 1.6;
-            width: 50%;
-        }
-/*========================= FIM PROJECTS ==================================*/
-   /*========================= PROPOSTAS ==================================*/
-   .propostas {
+.projects, .propostas, .biography {
     margin: 40px 0;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.projects h2, .propostas h2, .biography h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.project-item {
+    display: flex;
+    align-items: flex-start; /* Alinhamento do item do projeto */
+    justify-content: space-between; /* Espaçamento entre itens */
+    flex-wrap: wrap;
+    gap: 20px; /* Espaço entre os itens */
+}
+
+.project-item img {
+    max-width: 100%; /* Ajusta a imagem */
+    height: auto;
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-item p {
+    font-size: 18px; /* Tamanho da fonte ajustado */
+    line-height: 1.6;
+    width: 100%; /* Ocupa 100% em telas menores */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Media Queries para telas maiores */
+@media (min-width: 600px) {
+    .project-item {
+        justify-content: flex-start; /* Alinha itens à esquerda */
+    }
+    
+    .project-item img {
+        width: 300px; /* Largura fixa para imagens em telas grandes */
+    }
+
+    .project-item p {
+        width: 50%; /* Volta para 50% em telas maiores */
+        text-align: left; /* Alinha texto à esquerda */
+    }
+}
+
+@media (min-width: 900px) {
+    .project-item {
+        justify-content: space-between; /* Mantém espaçamento entre itens */
+    }
+
+    .project-item img {
+        width: 300px; /* Tamanho fixo para melhor apresentação */
+    }
+
+    .project-item p {
+        width: 40%; /* Largura reduzida para texto em telas muito grandes */
+    }
+}
+
+
+        
+/*========================= FIM PROJECTS ==================================*/
+
+/*========================= PROPOSTAS ==================================*/
+
+/* Estilo geral do contêiner */
+.propostas {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-family: 'Roboto', sans-serif;
@@ -185,15 +236,20 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    animation: pulsar 3s ease-in-out infinite; /* Aplica a animação ao contêiner */
+    
 }
 
 .propostas h2 {
-    font-size: 24px;
-    margin-bottom: 20px; /* Aumentado para dar mais espaço ao título */
+    font-size: 50px;
+    margin-bottom: 30px;
     text-align: center;
     font-weight: 600;
     color: #333;
+    border-bottom: 3px solid #007bff; /* Adiciona uma linha azul abaixo do título */
+    padding-bottom: 10px; /* Espaçamento entre o texto e a linha */
 }
+
 
 .propostas ul {
     padding: 0;
@@ -206,25 +262,24 @@
     align-items: center;
     text-align: center;
     margin: 20px 0;
-    font-size: 18px; /* Ajustado para melhor legibilidade */
-    color: #333; /* Ajuste a cor do texto */
-    font-family: 'Roboto', sans-serif; /* Fonte consistente com o resto do layout */
-    font-weight: normal; /* Font-weight normal para o texto */
-    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com um pouco de transparência */
+    font-size: 18px;
+    color: #080707; /* Texto branco para contraste com o fundo azul */
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(270deg, #d68d49, #007bff); /* Cor azul aplicada diretamente */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
-    max-width: 800px; /* Limite máximo para evitar que os itens fiquem muito largos */
+    max-width: 800px;
     margin-left: auto;
-    margin-right: auto; /* Centraliza os itens na tela */
-    box-sizing: border-box; /* Garante que o padding e a borda sejam incluídos na largura e altura total */
+    margin-right: auto;
+    box-sizing: border-box;
 }
 
 .propostas ul li img {
     width: 80%;
-    max-width: 400px; /* Reduzido para garantir melhor visualização */
+    max-width: 400px;
     height: auto;
     margin: 20px 0;
     border-radius: 10px;
@@ -232,29 +287,37 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.propostas ul li:hover {
-    transform: scale(1.02);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+.propostas ul li img:hover {
+    transform: scale(1.05);
 }
 
 .propostas ul li strong {
-    color: #007bff;
-    font-size: 20px; /* Ajustado para não desviar do texto */
+    color: #0e0b16; /* Texto do título também branco */
+    border-bottom: 3px solid #0b0d0f; /* Adiciona uma linha azul abaixo do título */
+    font-size: 20px;
     text-transform: uppercase;
     display: block;
-    margin-bottom: 10px; /* Espaçamento abaixo do título */
+    margin-bottom: 10px;
 }
 
+/* Listagem de itens dentro das propostas */
 .propostas ul li ul {
-    padding-left: 20px; /* Adiciona espaçamento para as listas internas */
-    text-align: left; /* Alinha o texto à esquerda */
-    font-size: 16px; /* Ajusta o tamanho da fonte dos itens da lista */
-    color: #555; /* Cor mais suave para os itens da lista */
+    padding-left: 20px;
+    text-align: left;
+    font-size: 16px;
+
 }
 
 .propostas ul li ul li {
-    margin-bottom: 10px; /* Espaçamento entre os itens da lista */
+    margin-bottom: 10px;
 }
+  /* Ajuste para telas menores */
+  @media (max-width: 768px) {
+            header .container {
+                padding: 150px 10px; /* Diminui o padding em telas menores */
+                background-size: contain; /* Faz a imagem se ajustar sem ser cortada */
+            }
+        }
 
 
 
@@ -280,6 +343,7 @@
             color: #050505;
             text-decoration: none;
         }
+        
 /*========================= FIM DA PROPOSTAS ==================================*/
 
 /*=========================   RODAPÉ ==================================*/
@@ -296,12 +360,16 @@
         footer p {
             margin: 0;
         }
-/*========================= FIM  RODAPÉ ==================================*/
+          /* Ajuste para telas menores */
+          @media (max-width: 768px) {
+            header .container {
+                padding: 150px 10px; /* Diminui o padding em telas menores */
+                background-size: contain; /* Faz a imagem se ajustar sem ser cortada */
+            }
+        }
 
-
-
+        
     </style>
-
 
 
 
@@ -315,47 +383,32 @@
         </div>
     </header>
 
+   
+    
+
     <section class="banner"></section>
 
-    <section class="biography">
-        <div class="container">
-            <h2>O Papel Fundamental do Vereador</h2>
-            <p>
-                <strong>O vereador</strong> é um agente político crucial, eleito diretamente pela população por meio de voto direto e secreto. Sua atuação se dá no <strong>Poder Legislativo municipal</strong>, equivalente ao papel que <em>deputados</em> e <em>senadores</em> desempenham em níveis estaduais e federais.
-            </p>
-    
-            <p>
-                A principal função do vereador é <strong>representar os interesses da população</strong> junto ao poder público. Ele é a voz da comunidade, escolhida para defender os direitos e garantir que as necessidades locais sejam atendidas.
-            </p>
-    
-            <p>
-                Uma das atividades mais importantes do vereador é <strong>legislar</strong>, ou seja, criar e modificar as leis municipais que orientam tanto o poder público quanto a sociedade. O vereador tem a responsabilidade de assegurar que as normas sejam justas e benéficas para todos.
-            </p>
-    
-            <blockquote>
-                "Legislar é garantir que a voz da sociedade seja ouvida e respeitada."
-            </blockquote>
-    
-            <p>
-                Além de criar leis, o vereador também tem um papel fiscalizador. Ele acompanha de perto as ações do poder executivo, garantindo que os recursos públicos sejam aplicados corretamente e em conformidade com as necessidades da comunidade.
-            </p>
-    
-            <p>
-                <strong>Como representante do povo</strong>, o vereador pode apresentar projetos de lei que melhorem a qualidade de vida da população. Ele atua de maneira próxima aos eleitores, ouvindo suas demandas e propondo soluções para a câmara municipal.
-            </p>
-    
-            <p>
-                <em>Em resumo:</em> o vereador luta pela coletividade, elabora leis que beneficiam a cidade e fiscaliza o cumprimento das responsabilidades do poder executivo, sempre buscando o bem-estar da sociedade.
-            </p>
-        </div>
-    </section>
-    
 
     <section class="propostas">
         <div class="container">
             <h2>Propostas de Governo</h2>
             <ul>
                 <!-- Novas Propostas -->
+                <li>
+                    <strong>RONDA DOS GUARDA MUNICIPAL NAS ESCOLAS E NOS BAIRROS DE JARINU</strong>
+                    <p>O projeto "Jarinu Mais Segura" tem como objetivo fortalecer a segurança nas escolas e bairros do município. A iniciativa prevê o aumento da presença da Guarda Municipal nas proximidades das escolas e o patrulhamento ostensivo em todos os bairros, garantindo um ambiente mais tranquilo para estudantes, professores e comunidade em geral.</p>
+                    <p>Também será implementada a instalação de câmeras de segurança nas saídas dos bairros, além de totens de monitoramento para ampliar a segurança. Um sistema eletrônico de monitoramento será instalado em diversos pontos da cidade, integrando-se diretamente com a Guarda Municipal.</p>
+                    <p>Através deste projeto, estamos comprometidos em:</p>
+                    <ul>
+                        <li><strong>Garantir a segurança:</strong> Realizar patrulhamento ostensivo nos horários de entrada, saída e intervalos, monitorando áreas de risco e respondendo rapidamente a qualquer incidente.</li>
+                        <li><strong>Combater a violência:</strong> Implementar ações preventivas contra o bullying, a violência e o tráfico de drogas, promovendo um ambiente escolar mais saudável e respeitoso.</li>
+                        <li><strong>Fortalecer a parceria:</strong> Estabelecer uma relação de confiança com a comunidade escolar, através de um canal de comunicação aberto e transparente.</li>
+                        <li><strong>Oferecer apoio:</strong> Trabalhar em parceria com a Secretaria de Educação e o Conselho Tutelar para identificar e acompanhar casos que necessitem de atenção especial.</li>
+                    </ul>
+                    <img src="/img/ronda.jpg" alt="Jarinu Mais Segura - Segurança nas escolas e bairros">
+                </li>
+
+
                 <li>
                     <strong>Proteção animal e saúde pública:</strong>
                     <ul>
@@ -393,9 +446,43 @@
                         <li>Investir em escolas técnicas de qualidade para capacitar a população.</li>
                         <li>Permitir que as grandes empresas do município contratem profissionais locais, sem a necessidade de buscar em cidades vizinhas.</li>
                     </ul>
-                    <img src="/img/cursos.jpg" alt="Cursos profissionalizantes">
+                    <img src="/img/Design sem nome.png" alt="Cursos profissionalizantes">
                 </li>
             </ul>
+        </div>
+    </section>
+
+
+    <section class="biography">
+        <div class="container">
+            <h2>O Papel Fundamental do Vereador</h2>
+            <p>
+                <strong>O vereador</strong> é um agente político crucial, eleito diretamente pela população por meio de voto direto e secreto. Sua atuação se dá no <strong>Poder Legislativo municipal</strong>, equivalente ao papel que <em>deputados</em> e <em>senadores</em> desempenham em níveis estaduais e federais.
+            </p>
+    
+            <p>
+                A principal função do vereador é <strong>representar os interesses da população</strong> junto ao poder público. Ele é a voz da comunidade, escolhida para defender os direitos e garantir que as necessidades locais sejam atendidas.
+            </p>
+    
+            <p>
+                Uma das atividades mais importantes do vereador é <strong>legislar</strong>, ou seja, criar e modificar as leis municipais que orientam tanto o poder público quanto a sociedade. O vereador tem a responsabilidade de assegurar que as normas sejam justas e benéficas para todos.
+            </p>
+    
+            <blockquote>
+                "Legislar é garantir que a voz da sociedade seja ouvida e respeitada."
+            </blockquote>
+    
+            <p>
+                Além de criar leis, o vereador também tem um papel fiscalizador. Ele acompanha de perto as ações do poder executivo, garantindo que os recursos públicos sejam aplicados corretamente e em conformidade com as necessidades da comunidade.
+            </p>
+    
+            <p>
+                <strong>Como representante do povo</strong>, o vereador pode apresentar projetos de lei que melhorem a qualidade de vida da população. Ele atua de maneira próxima aos eleitores, ouvindo suas demandas e propondo soluções para a câmara municipal.
+            </p>
+    
+            <p>
+                <em>Em resumo:</em> o vereador luta pela coletividade, elabora leis que beneficiam a cidade e fiscaliza o cumprimento das responsabilidades do poder executivo, sempre buscando o bem-estar da sociedade.
+            </p>
         </div>
     </section>
     
@@ -419,16 +506,16 @@
     <section class="social">
         <div class="container">
             <h2>Conecte-se com Ney</h2>
-            <a href="https://www.instagram.com" target="_blank">
+            <a href="https://www.instagram.com/ney.cardoso.p/" target="_blank">
                 <i class="fab fa-instagram"></i> Instagram
             </a>
             <a href="https://www.facebook.com" target="_blank">
                 <i class="fab fa-facebook"></i> Facebook
             </a>
-            <a href="mailto:neydoprimavera@gmail.com">
+            <a href="mailto:Neydanger14@gmail.com">
                 <i class="fas fa-envelope"></i> E-mail
             </a>
-            <a href="https://wa.me/5511999999999" target="_blank">
+            <a href="https://wa.me/5511941585508" target="_blank">
                 <i class="fab fa-whatsapp"></i> WhatsApp
             </a>
             
@@ -436,10 +523,9 @@
     </section>
     
     
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024. Ney do Primavera - Todos os direitos reservados.</p>
-        </div>
-    </footer>
+        <!-- Rodapé -->
+        <footer>
+            <p>&copy; 2024 Ney do Primavera. Todos os direitos reservados.</p>
+        </footer>
+    
 </body>
